@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up - NeuroCare</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <div id="navbarContainer" ></div>
+    <div class="auth-container">
+        <h2>Welcome to NeuroCare</h2>
+        <p>Log in or create an account</p>
+
+        <form id="auth-form">
+            <div class="bcerror" id="log_bc_error"></div>
+            <div class="error" id="log_error"></div>
+            <input type="text" id="log_email" placeholder="Your registered Email">
+            <div class="error" id="email_log_error"></div>
+            <input type="password" id="log_password" placeholder="Password">
+            <label for="payment_mode">You are loging in as?</label><br>
+      <select id="role" name="role">
+        <option value="" disabled selected>Please select who you are</option>
+        <option value="Doctor">Doctor</option>
+        <option value="CareGiver">Care Giver</option>
+        <option value="Patient">Patient</option>
+        </select>
+
+            <button type="submit" id="auth-btn">Login</button>
+        </form>
+
+        <p>Don't have an account? <a href="registration">Sign Up</a></p>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+    <script src="navbar.js"></script>
+</body>
+</html>

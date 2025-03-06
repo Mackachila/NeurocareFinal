@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up - NeuroCare</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <div id="navbarContainer" ></div>
+    <div class="auth-container">
+        <h2>Welcome to NeuroCare</h2>
+        <p>Create an account</p>
+
+        <form id="reg-form">
+            <div class="bcerror" id="bc_error"></div>
+            <div class="error" id="reg_error"></div>
+            <label for="payment_mode">Register as?</label><br>
+      <select id="role" name="role">
+        <option value="" disabled selected>Please select who you are</option>
+        <option value="Doctor">Doctor</option>
+        <option value="CareGiver">Care Giver</option>
+        <option value="Patient">Patient</option>
+        </select>
+            <input type="text" id="reg_username" placeholder="Username" >
+            <input type="text" id="reg_contact" placeholder="Contact" >
+            <div class="error" id="contact_reg_error"></div>
+            <input type="text" id="reg_email" placeholder="Email" >
+            <div class="error" id="email_reg_error"></div>
+            <input type="password" id="reg_password" placeholder="Password" >
+            <div class="error" id="password_reg_error"></div>
+            <input type="password" id="reg_cpassword" placeholder="Confirm Password" >
+            <div class="error" id="cpassword_reg_error"></div>
+            <button type="submit" id="reg-btn">Sign Up</button>
+        </form>
+
+        <p>Have an account? <a href="auth">Log in</a></p>
+    </div>
+
+    <script src="registration.js"></script>
+    <script src="navbar.js"></script>
+</body>
+</html>

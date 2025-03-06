@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroCare- Dashboard</title>
+    <link rel="stylesheet" href="dr.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <span>🏥</span>
+            <span>NeuroCare</span>
+        </div>
+        
+        <button class="menu-toggle" id="menuToggle">☰</button>
+        
+        <div class="nav-links" id="navLinks">
+            <a href="notifications_dr" class="active">Notifications</a>
+            <a href="emergencies_dr">Emergencies</a>
+            <a href="appointments_dr">Appointments</a>
+            <a href="reports_dr">Reports</a>
+            <a href="#" id="logout">Logout</a>
+        </div>
+        
+        <div class="nav-actions">
+            <div class="user-profile">
+                <!-- <div class="user-avatar"></div> -->
+                <span id="emailContent">Loading...</span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <div class="dashboard-header">
+            <div class="dashboard-title">
+                <h1>GPS Center</h1>
+                <p>Get real time locations here</p>
+            </div>
+            
+            <div class="action-buttons">
+            </div>
+        </div>
+        
+        <!-- New GPS and Tracking Section -->
+        <div class="tracking-section">
+            <div class="list-header">
+                <div class="list-title">Location Tracking</div>
+            </div>
+          
+            <div id="loading-spinner" class="spinner-overlay hidden">
+                <div class="spinner"></div>
+                <p class="spinner-text">Getting Live location, please wait...</p>
+            </div>
+        
+            <div class="gps-container">
+                <div class="gps-controls">
+                    <button class="btn btn-primary" id="toggle-tracking">Enable GPS</button>
+                    <span id="tracking-info" class="gps-status">GPS is currently disabled</span>
+                </div>
+                
+                <div class="map-container" id="map">
+                    Google Map will appear here when GPS is enabled
+                </div>
+            </div>
+            
+            <div class="list-header">
+                <div class="list-title">Patient Tracker</div>
+            </div>
+            
+            <div class="tracker-controls">
+                <input type="email" placeholder="Enter patient email to track" id="track-email">
+                <button class="btn btn-primary" id="track-user-btn">Track Patient</button>
+            </div>
+        </div>
+        
+        <div class="list-header">
+            <div class="list-title">Historical movements</div>
+        </div>
+        
+        <div class="tracker-controls">
+   
+    <ul id="historical-movements" class="history-list"></ul>
+        </div>
+    </div>
+        
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#">About</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact</a>
+            <a href="#">Help</a>
+        </div>
+        
+        <div class="copyright">
+            &copy; 2025 NeuroCare. All rights reserved.
+        </div>
+    </footer>
+
+
+    <script src="gps.js"></script>
+     <!-- <script src="dashboard.js"></script> -->
+     <script src="notifications.js"></script>
+
+
+<script>
+    // Get the button and the nav links container
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+
+// Add an event listener to the menu button
+menuToggle.addEventListener('click', function() {
+    // Toggle a class that controls visibility of the nav links
+    navLinks.classList.toggle('active');
+});
+
+</script>
+    
+</body>
+</html>

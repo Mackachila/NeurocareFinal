@@ -1,0 +1,230 @@
+/* contact
+#medicalreport {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: auto;
+}
+
+#medicalreport input,
+#medicalreport textarea {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#medicalreport button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#medicalreport button:hover {
+    background-color: #0056b3;
+}
+
+#medical_report {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.report-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.status {
+    font-weight: bold;
+}
+
+.status.critical {
+    color: red;
+}
+
+.status.improved {
+    color: green;
+}
+
+.status.better {
+    color: blue;
+} */
+
+
+#medical_report {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.report-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-left: 5px solid #007bff;
+    transition: transform 0.2s ease-in-out;
+}
+
+.report-card:hover {
+    transform: scale(1.02);
+    background-color: #007bff27;
+}
+
+.report-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+.report-email {
+    font-weight: bold;
+    color: #333;
+}
+
+.report-time {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.report-body p {
+    margin: 5px 0;
+    color: #444;
+}
+
+.report-status {
+    font-weight: bold;
+    
+}
+
+.report-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.edit-btn {
+    background: #007bff;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.edit-btn:hover {
+    background: #0056b3;
+}
+
+
+
+#editReportForm {
+    display: none;
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+#editReportForm h3 {
+    margin-bottom: 10px;
+}
+
+#editReportForm input,
+#editReportForm textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#editReportForm button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#editReportForm button:first-of-type {
+    background: #28a745;
+    color: white;
+}
+
+#editReportForm button:last-of-type {
+    background: #dc3545;
+    color: white;
+    margin-left: 10px;
+}
+
+
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    width: 80%; /* Adjust width as needed */
+    max-width: 500px; /* Prevents it from being too wide */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #555;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+/* Buttons */
+#saveEdit {
+    background: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+#saveEdit:hover {
+    background: #0056b3;
+}

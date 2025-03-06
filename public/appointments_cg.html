@@ -1,0 +1,113 @@
+<!--  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroCare- Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>NeuroCare Dementia Support Center</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+   
+    <link rel="stylesheet" href="dr.css">
+    <link rel="stylesheet" href="reports.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <span>🏥</span>
+            <span>NeuroCare</span>
+        </div>
+        
+        <button class="menu-toggle" id="menuToggle">☰</button>
+        
+        <div class="nav-links" id="navLinks">
+            <a href="gpscenter_cg" class="active">gps Tracking</a>
+            <a href="notifications_cg">Notifications</a>
+            <a href="reports_cg">Reports</a>
+            <a href="emergencies_cg">Emergencies</a>
+            <a href="#" id="logout">Logout</a>
+        </div>
+        
+        <div class="nav-actions">
+            <div class="user-profile">
+                <!-- <div class="user-avatar"></div> -->
+                <span id="emailContent">Loading...</span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <div id="section6" class="section">
+            <section id="contact">
+                <h2>Appointment Management</h2>
+                <button id="openBookingForm">+ New Appointment</button><br>
+                <div id="bookingForm" style="display:none;">
+                    <h3>Schedule Appointment</h3>
+                    <form id="appointmentForm">
+                        <input type="text" id="withWhom" placeholder="Scheduled With (Their registered email address)" required />
+                        <input type="datetime-local" id="appointmentDate" required />
+                        <input type="text" id="location" placeholder="Location" required />
+                        <input type="text" id="contact" placeholder="Contact" required />
+                        <input type="text" id="address" placeholder="Address" required />
+                        <textarea id="about" placeholder="About the Appointment" required></textarea><br>
+                        <button type="submit">Book Now</button>
+                    </form>
+                </div><br>
+                <div id="appointmentsContainer"></div><br>
+
+               
+            </section>
+            <div id="appointmentsContainer2"></div>
+        </div>
+        
+        
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#">About</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact</a>
+            <a href="#">Help</a>
+        </div>
+        
+        <div class="copyright">
+            &copy; 2025 NeuroCare. All rights reserved.
+        </div>
+    </footer>
+
+
+        <script src="appointments.js"></script>
+
+
+<script>
+    // Get the button and the nav links container
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+
+// Add an event listener to the menu button
+menuToggle.addEventListener('click', function() {
+    // Toggle a class that controls visibility of the nav links
+    navLinks.classList.toggle('active');
+});
+
+</script>
+    
+</body>
+</html>
